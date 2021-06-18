@@ -52,7 +52,10 @@ class ColorsController extends Controller
 
     public function update(Request $request, Color $color)
     {
-        //
+        $color->update([
+            'status'=> $request->input('status')
+        ]);
+        return new ColorsResource($color);
     }
 
 

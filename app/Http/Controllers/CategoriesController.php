@@ -40,8 +40,8 @@ class CategoriesController extends Controller
             'palette_id'=>'Nullable'
         ]);
         $category= Category::create($data);
-        return response($category,200);
-
+       // return response($category,200);
+        return new CategoriesResource($category);
 
     }
 
@@ -55,7 +55,7 @@ class CategoriesController extends Controller
         $palettes = Palette::where('category_id',$category_id)->get();
         return response($palettes,200);
 
-      //return new CategoriesResource($category);
+
     }
 
 
