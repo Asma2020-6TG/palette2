@@ -62,6 +62,6 @@ class ColorsController extends Controller
     {
         $color=Color::class->find($color);
         $color->delete();
-        return 'color deleted',
+        return 'color deleted';
     }
 }
