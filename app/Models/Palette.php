@@ -11,7 +11,6 @@ class Palette extends Model
     protected $fillable = [
         'id',
         'category_id',
-        'color_id',
         'size',
         'favourite'
     ];
@@ -20,11 +19,15 @@ class Palette extends Model
 
     public function colors()
     {
-        return $this->hasManyThrough(
+        return $this->belongsToMany(
             Color::class,
-            Category::class,
+            'palette_colors',
             'palette_id',
-            'category_id'
-        );
+            'color_id');
+    }
+
+    public function categories()
+    {
+        return $this->belongsTo(Category::class);
     }
 }

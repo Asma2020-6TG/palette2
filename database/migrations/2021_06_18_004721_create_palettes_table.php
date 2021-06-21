@@ -16,7 +16,6 @@ class CreatePalettesTable extends Migration
         Schema::create('palettes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id')->unsigned();
-            $table->integer('color_id')->unsigned();
             $table->integer('size')->numberBetween($int=3,$int=6);
             $table->boolean('favourite');
             $table->timestamps();

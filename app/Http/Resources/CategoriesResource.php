@@ -28,8 +28,8 @@ class CategoriesResource extends JsonResource
             'type'=>'Categories',
             'attributes'=> [
                 'name'=> $this->name,
-                'color_id'=> $this->color_id,
-                'palette_id'=> $this->palette_id
+                'color_id'=>(string)$this->color_id,
+                'palette_id'=> (string)$this->palette_id
             ]
         ];
     }

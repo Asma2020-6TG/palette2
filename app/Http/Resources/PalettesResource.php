@@ -15,7 +15,6 @@ class PalettesResource extends JsonResource
             'type'=>'Palettes',
             'attributes'=> [
                 'category_id'=>(string)$this->category_id,
-                'color_id'=>(string)$this->color_id,
                 'size'=>(string)$this->size,
                 'favourite'=> (string)$this->favourite
             ]

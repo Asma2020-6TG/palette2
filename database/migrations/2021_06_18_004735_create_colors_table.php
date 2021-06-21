@@ -16,12 +16,13 @@ class CreateColorsTable extends Migration
         Schema::create('colors', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id')->unsigned();
-            $table->integer('palette_id')->unsigned();
             $table->boolean('status');
             $table->string('hexcolor');
             $table->string('rgbcolor');
             $table->timestamps();
+
         });
+
     }
 
     /**

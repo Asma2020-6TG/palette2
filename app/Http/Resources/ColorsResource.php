@@ -23,7 +23,6 @@ class ColorsResource extends JsonResource
                 'rgbcolor'=> $this->rgbcolor,
                 'status'=>(string)$this->status,
                 'category_id'=> (string)$this->category_id,
-                'palette_id'=> (string)$this->palette_id
             ]
         ];
     }

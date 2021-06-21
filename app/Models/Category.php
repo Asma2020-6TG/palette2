@@ -28,6 +28,7 @@ class Category extends Model
         return $this->hasMany(Palette::class);
     }
 
+
     public function colors()
     {
         return $this->hasMany(Color::class);

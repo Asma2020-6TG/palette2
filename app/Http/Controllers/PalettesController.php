@@ -91,9 +91,18 @@ return response($palettes,200);
      * @param  \App\Models\Palette  $palette
      * @return \Illuminate\Http\Response
      */
+   public function getPaletteColors($id){
+        $palette = Palette::find($id);
+         return $palette -> colors;
+   }
+
     public function destroy(Palette $palette)
     {
-        $palette->delete();
+        //$palette = Palette::find($palette);
+       // if(!$palette)
+        //    return 'Palette does not exist';
+        //$palette -> colors() -> delete();
+        $palette -> delete();
         return 'palette deleted';
     }
 }

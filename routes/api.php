@@ -20,4 +20,5 @@ use App\Http\Controllers\ColorsController;
 
 Route::apiResource('/categories',CategoriesController::class);
 Route::apiResource('/palettes',PalettesController::class);
+Route::get('/palette-colors/{id}',[PalettesController::class,'getPaletteColors']);
 Route::apiResource('/colors',ColorsController::class);
