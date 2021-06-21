@@ -14,7 +14,7 @@ class Color extends Model
         'rgbcolor',
         'status',
         'category_id',
-        'palette_id'
+       // 'palette_id'
 
     ];
     protected $hidden = [
