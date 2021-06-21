@@ -24,6 +24,7 @@ class ColorsController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
+            'palette_id' => 'nullable',
             'category_id'=> 'nullable',
             'hexcolor'=>'required',
             'rgbcolor'=>'Nullable',
@@ -60,7 +61,7 @@ class ColorsController extends Controller
 
     public function destroy(Color $color)
     {
-       
+
         $color -> delete();
         return 'color deleted';
     }
