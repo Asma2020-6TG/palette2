@@ -24,10 +24,9 @@ class ColorsController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'category_id'=> 'required',
+            'category_id'=> 'nullable',
             'hexcolor'=>'required',
             'rgbcolor'=>'Nullable',
-            'palette_id'=>'Nullable',
             'status'=>'nullable'
         ]);
         $color= Color::create($data);
