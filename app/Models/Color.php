@@ -13,7 +13,8 @@ class Color extends Model
         'hexcolor',
         'rgbcolor',
         'status',
-        'category_id'
+        'category_id',
+        'palette_id'
 
     ];
     protected $hidden = [

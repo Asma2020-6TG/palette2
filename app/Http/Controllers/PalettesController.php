@@ -100,8 +100,8 @@ return response($palettes,200);
         //$palette = Palette::find($palette);
        // if(!$palette)
         //    return 'Palette does not exist';
-        //$palette -> colors() -> delete();
-        $palette -> delete();
+        $palette -> colors() -> delete();
+        //$palette -> delete();
         return 'palette deleted';
     }
 }

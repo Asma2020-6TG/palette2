@@ -60,6 +60,8 @@ class ColorsController extends Controller
 
     public function destroy(Color $color)
     {
-        //
+        $color=Color::class->find($color);
+        $color->delete();
+        return 'color deleted',
     }
 }
