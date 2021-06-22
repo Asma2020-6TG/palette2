@@ -101,7 +101,7 @@ return response($palettes,200);
        // if(!$palette)
         //    return 'Palette does not exist';
         $palette -> colors() -> delete();
-        //$palette -> delete();
+        $palette -> delete();
         return 'palette deleted';
     }
 }

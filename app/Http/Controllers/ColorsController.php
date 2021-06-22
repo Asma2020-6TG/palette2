@@ -27,7 +27,7 @@ class ColorsController extends Controller
     {
         $data = $request->validate([
 
-            'hexcolor'=>'required',
+            'hexcolor'=>'required|hexcolor',
             'rgbcolor'=>'Nullable',
             'status'=>'nullable',
             'palette_id' => 'nullable',
