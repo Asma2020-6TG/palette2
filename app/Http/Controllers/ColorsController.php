@@ -27,11 +27,11 @@ class ColorsController extends Controller
     {
         $data = $request->validate([
 
-            'hexcolor'=>'required|hexcolor',
+            'hexcolor'=>'required',
             'rgbcolor'=>'Nullable',
             'status'=>'nullable',
-            'palette_id' => 'nullable',
-            'category_id'=> 'nullable'
+            'palette_id' => 'required',
+            'category_id'=> 'required'
         ]);
         $color= Color::create($data);
         return response($color,200);
