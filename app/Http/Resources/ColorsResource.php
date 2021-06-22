@@ -22,9 +22,10 @@ class ColorsResource extends JsonResource
                 'hexcolor'=> $this->hexcolor,
                 'rgbcolor'=> $this->rgbcolor,
                 'status'=>(string)$this->status,
-                'category_id'=> (string)$this->category_id
+                'category_id'=> (string)$this->category_id,
+                'palette_id'=> (string)$this->palette_id
                    ]
         ];
-        //  'palette_id'=> (string)$this->palette_id
+
     }
 }

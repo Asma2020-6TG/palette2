@@ -21,7 +21,7 @@ class Palette extends Model
     {
         return $this->belongsToMany(
             Color::class,
-            'palette_colors',
+            'palette__colors',
             'palette_id',
             'color_id');
     }

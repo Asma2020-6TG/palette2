@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Palette_Color extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'id',
         'palette_id',

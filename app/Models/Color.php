@@ -14,7 +14,7 @@ class Color extends Model
         'rgbcolor',
         'status',
         'category_id',
-       // 'palette_id'
+        'palette_id'
 
     ];
     protected $hidden = [
@@ -31,7 +31,7 @@ class Color extends Model
     {
        return $this->belongsToMany(
            Palette::class,
-           'palette_colors',
+           'palette__colors',
            'color_id',
            'palette_id');
     }

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Http\Resources\ColorsResource;
+use App\Http\Resources\PaletteColorResource;
 use App\Models\Color;
 use App\Models\Category;
+use App\Models\Palette_Color;
 use Illuminate\Http\Request;
 
 class ColorsController extends Controller
@@ -28,7 +30,7 @@ class ColorsController extends Controller
             'hexcolor'=>'required',
             'rgbcolor'=>'Nullable',
             'status'=>'nullable',
-           // 'palette_id' => 'nullable',
+            'palette_id' => 'nullable',
             'category_id'=> 'nullable'
         ]);
         $color= Color::create($data);
@@ -65,5 +67,24 @@ class ColorsController extends Controller
 
         $color -> delete();
         return 'color deleted';
+    }
+
+ //data for pivot table
+
+    public function insert(Request $request)
+    {
+        $data = $request->validate([
+
+            'palette_id' => 'required',
+            'color_id'=> 'required'
+        ]);
+        $pivot= Palette_Color::create($data);
+        return response($pivot,200);
+    }
+
+
+    public function getPaletteColor()
+    {
+        return PaletteColorResource::collection(Palette_Color::all());
     }
 }

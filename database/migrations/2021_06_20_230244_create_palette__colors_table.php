@@ -13,7 +13,7 @@ class CreatePaletteColorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('palette_colors', function (Blueprint $table) {
+        Schema::create('palette__colors', function (Blueprint $table) {
             $table->id();
             $table->integer('palette_id')->unsigned();
             $table->integer('color_id')->unsigned();
@@ -36,6 +36,6 @@ class CreatePaletteColorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('palette_colors');
+        Schema::dropIfExists('palette__colors');
     }
 }

@@ -22,3 +22,5 @@ Route::apiResource('/categories',CategoriesController::class);
 Route::apiResource('/palettes',PalettesController::class);
 Route::get('/palette-colors/{id}',[PalettesController::class,'getPaletteColors']);
 Route::apiResource('/colors',ColorsController::class);
+Route::get('/palettecolors',[ColorsController::class,'getPaletteColor']);
+Route::Post('/palettecolors',[ColorsController::class,'insert']);
